@@ -30,6 +30,11 @@ body {
     font-size: 22px;
 }
 
+h3 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
 .card {
     background-color: white;
     border-radius: 20px;
@@ -51,6 +56,115 @@ body {
 
 .neutralStar {
     color: var(--main-bg-color)
+}
+
+/****** Header ***********/
+header {
+    max-width: 1440px;
+    height: 79px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+header div a{
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    text-decoration: none;
+    margin: 34.5px;
+    padding-top: 14px;
+}
+
+header div a:hover {
+    color: #0065FC;
+    border-top: solid;
+    border-top-color: #0065FC;
+}
+
+/****** Title And Search And Filters ***********/
+.title {
+    margin-top: 1em;
+    margin-bottom: 2em ;
+}
+.search {
+    margin-top: 2.5em;
+}
+.search-container {
+    display: flex;
+}
+
+.search-icon i {
+    background-color: #F2F2F2;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 48px;
+    border: 1px solid #F2F2F2;
+    border-radius: 15px 0px 0px 15px;
+}
+
+
+.search-text { 
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 50px;
+    width: 195px;
+    border: 1px solid #F2F2F2;
+    border-right: none;
+    border-left: none;
+}
+
+.search-text:modal {
+    font-weight: 700;
+    font-size: 18px;
+    color: #000000;
+    text-align: center;
+}
+
+.search-text::-moz-placeholder {
+    font-weight: 700;
+    font-size: 18px;
+    color: #000000;
+    text-align: center;
+}
+
+.search-text::-webkit-input-placeholder {
+    font-weight: 700;
+    font-size: 18px;
+    color: #000000;
+    text-align: center;
+}
+
+.search-text:active {
+    font-weight: 700;
+    font-size: 18px;
+    color: #000000;
+    text-align: center;
+}
+
+.search-button {
+    display: inline-block;
+    height: 50px;
+    width: 132px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: #0065FC;
+    border: 1px solid #0065FC;
+    border-radius: 0px 15px 15px 0px;
+    border-right: ;
 }
 
 /****** Hebergements And Populaires ***********/
@@ -115,9 +229,6 @@ body {
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
-
-
-
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
