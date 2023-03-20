@@ -74,7 +74,7 @@ header {
     flex-flow: row wrap;
 }
 
-header div a{
+header div a {
     font-size: 16px;
     font-weight: 400;
     color: black;
@@ -92,11 +92,13 @@ header div a:hover {
 /****** Title And Search And Filters ***********/
 .title {
     margin-top: 1em;
-    margin-bottom: 2em ;
+    margin-bottom: 2em;
 }
+
 .search {
     margin-top: 2.5em;
 }
+
 .search-container {
     display: flex;
 }
@@ -113,8 +115,7 @@ header div a:hover {
     border-radius: 15px 0px 0px 15px;
 }
 
-
-.search-text { 
+.search-text {
     display: inline-block;
     justify-content: center;
     align-items: center;
@@ -155,15 +156,42 @@ header div a:hover {
 }
 
 .search-button {
+    color: #FFFFFF;
+    background-color: #0065FC;
+    border: 1px solid #0065FC;
+
+}
+
+button.search-button.screen {
     display: inline-block;
     height: 50px;
     width: 132px;
     font-weight: 700;
     font-size: 18px;
-    color: #FFFFFF;
-    background-color: #0065FC;
-    border: 1px solid #0065FC;
     border-radius: 0px 15px 15px 0px;
+}
+
+button.search-button.responsive {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    button.search-button.screen {
+        display: none;
+    }
+
+    button.search-button.responsive {
+        display: inline-block;
+        max-width: 100%;
+        width: 49px;
+        height: 49px;
+        border-radius: 15px 15px 15px 15px;
+    }
+
+    button.search-button.responsive i {
+        color: #FFFFFF;
+    }
 }
 
 /****** Hebergements And Populaires ***********/
