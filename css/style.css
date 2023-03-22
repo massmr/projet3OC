@@ -14,6 +14,8 @@
 }
 
 body {
+    width: 100%;
+    margin: 0px;
     display: flex;
     justify-content: center;
 }
@@ -22,7 +24,7 @@ body {
     width: 100%;
     max-width: 1440px;
     padding: 0 50px;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 .section-title {
@@ -69,12 +71,16 @@ header {
     align-items: center;
 }
 
-.links {
+.links-logo {
+
+}
+
+.links-text {
     display: flex;
     flex-flow: row nowrap;
 }
 
-.element-sub-links {
+.element-sub-links-text {
     font-size: 16px;
     font-weight: 400;
     color: black;
@@ -83,7 +89,7 @@ header {
     padding-top: 14px;
 }
 
-.element-sub-links:hover { /*hover mode*/
+.element-sub-links-text:hover { /*hover mode*/
         color: #0065FC;
         border-top: solid #0065FC;
 }
@@ -93,50 +99,50 @@ header {
     header {
         height: 100px;
         width: 100%;
-        padding: 30px 0px;
+        padding: 30px 0px ;
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
         flex-wrap: nowrap;
     }
 
-    .links { /* IOT take all width*/
+    .links-text { /* IOT take all width*/
         width: 100%;
         height: 90px;
     }
 
-    .sub-links { /*share equal width between links,
-        and make bottom border*/
+    .sub-links-text { /*share equal width between links*/
         width: calc(100% / 2);
+    }
+
+    .element-sub-links-text {
+        margin: 20px 0px;
         border-bottom: solid #F2F2F2;
-        padding: 0px;
-        margin: 0px;
+        padding-bottom: 15px;
     }
 
-    .element-sub-links.hebergement {
+    .element-sub-links-text.hebergement {
         display: flex;
         justify-content: center;
     }
 
-    .element-sub-links.activites {
+    .element-sub-links-text.activites {
         display: flex;
         justify-content: center;
     }
 
-    .main-container { /*IOT free all width for header*/
+    .main-container { /*IOT free all width for header */
         padding: 0px 0px;
+        width: 100%;
     }
 
     /******** hover ********/
 
-    .sub-links:hover { 
-        border-bottom: solid #0065FC;
-        padding-bottom: 15px;
-    }
-
-    .element-sub-links:hover {
+    .element-sub-links-text:hover {
         color: #0065FC;
         border-top: none;
-    }
+        border-bottom: solid #0065FC;
+        padding-bottom: 15px;
 }
 
 /****** Title And Search And Filters ***********/
@@ -346,9 +352,9 @@ button.search-button.responsive {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    .main-container {
+    main {
         width: 100%;
-        padding: 0 0px;
+        padding: 0 20px;
         box-sizing: border-box;
     }
 }
