@@ -74,7 +74,7 @@ header {
     flex-flow: row wrap;
 }
 
-header div a {
+header div a.link {
     font-size: 16px;
     font-weight: 400;
     color: black;
@@ -83,11 +83,40 @@ header div a {
     padding-top: 14px;
 }
 
-header div a:hover {
+header div a.link:hover {
     color: #0065FC;
     border-top: solid;
     border-top-color: #0065FC;
 }
+
+@media (max-width: 768px) {
+    header {
+        background-color: #FFFFFF;
+        height: 113px;
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .links-logo {
+        padding: 20px 0 0 0;
+    }
+
+    .links {
+        margin: 0 0 0 0;
+        display: flex;
+        flex-direction: ;
+    }
+
+    header div a.link:hover {
+        color: #0065FC;
+        border-bottom: solid;
+        border-bottom-color: #0065FC;
+        border-top: none;
+        padding-bottom: 5px;
+    }
+}  
 
 /****** Title And Search And Filters ***********/
 .title {
@@ -296,5 +325,9 @@ button.search-button.responsive {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    .main-container {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
 }
