@@ -71,10 +71,10 @@ header {
 
 .links {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
 }
 
-header div a.link {
+.element-sub-links {
     font-size: 16px;
     font-weight: 400;
     color: black;
@@ -83,40 +83,61 @@ header div a.link {
     padding-top: 14px;
 }
 
-header div a.link:hover {
-    color: #0065FC;
-    border-top: solid;
-    border-top-color: #0065FC;
+.element-sub-links:hover { /*hover mode*/
+        color: #0065FC;
+        border-top: solid #0065FC;
 }
 
 @media (max-width: 768px) {
+    
     header {
-        background-color: #FFFFFF;
-        height: 113px;
+        height: 100px;
         width: 100%;
-        padding: 0;
+        padding: 30px 0px;
         display: flex;
         flex-direction: column;
+        flex-wrap: nowrap;
     }
 
-    .links-logo {
-        padding: 20px 0 0 0;
+    .links { /* IOT take all width*/
+        width: 100%;
+        height: 90px;
     }
 
-    .links {
-        margin: 0 0 0 0;
+    .sub-links { /*share equal width between links,
+        and make bottom border*/
+        width: calc(100% / 2);
+        border-bottom: solid #F2F2F2;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .element-sub-links.hebergement {
         display: flex;
-        flex-direction: ;
+        justify-content: center;
     }
 
-    header div a.link:hover {
-        color: #0065FC;
-        border-bottom: solid;
-        border-bottom-color: #0065FC;
-        border-top: none;
-        padding-bottom: 5px;
+    .element-sub-links.activites {
+        display: flex;
+        justify-content: center;
     }
-}  
+
+    .main-container { /*IOT free all width for header*/
+        padding: 0px 0px;
+    }
+
+    /******** hover ********/
+
+    .sub-links:hover { 
+        border-bottom: solid #0065FC;
+        padding-bottom: 15px;
+    }
+
+    .element-sub-links:hover {
+        color: #0065FC;
+        border-top: none;
+    }
+}
 
 /****** Title And Search And Filters ***********/
 .title {
@@ -327,7 +348,7 @@ button.search-button.responsive {
 @media (max-width: 767.98px) {
     .main-container {
         width: 100%;
-        padding: 0 20px;
+        padding: 0 0px;
         box-sizing: border-box;
     }
 }
