@@ -35,6 +35,7 @@ body {
 h3 {
     font-size: 16px;
     font-weight: 400;
+    margin: 8px 0px 30px 0px;
 }
 
 .card {
@@ -71,8 +72,9 @@ header {
     align-items: center;
 }
 
-.links-logo {
-
+.element-links-logo {
+    position: relative;
+    top: 10px;
 }
 
 .links-text {
@@ -85,69 +87,20 @@ header {
     font-weight: 400;
     color: black;
     text-decoration: none;
-    margin: 34.5px;
-    padding-top: 14px;
+    margin: 0px 34.5px 34.5px 34.5px;
+    padding-top: 18px;
+    position: relative;
+    bottom: 10px;
 }
 
 .element-sub-links-text:hover { /*hover mode*/
-        color: #0065FC;
-        border-top: solid #0065FC;
-}
-
-@media (max-width: 768px) {
-    
-    header {
-        height: 100px;
-        width: 100%;
-        padding: 30px 0px ;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        flex-wrap: nowrap;
-    }
-
-    .links-text { /* IOT take all width*/
-        width: 100%;
-        height: 90px;
-    }
-
-    .sub-links-text { /*share equal width between links*/
-        width: calc(100% / 2);
-    }
-
-    .element-sub-links-text {
-        margin: 20px 0px;
-        border-bottom: solid #F2F2F2;
-        padding-bottom: 15px;
-    }
-
-    .element-sub-links-text.hebergement {
-        display: flex;
-        justify-content: center;
-    }
-
-    .element-sub-links-text.activites {
-        display: flex;
-        justify-content: center;
-    }
-
-    .main-container { /*IOT free all width for header */
-        padding: 0px 0px;
-        width: 100%;
-    }
-
-    /******** hover ********/
-
-    .element-sub-links-text:hover {
-        color: #0065FC;
-        border-top: none;
-        border-bottom: solid #0065FC;
-        padding-bottom: 15px;
+    color: #0065FC;
+    border-top: 2px solid #0065FC;
 }
 
 /****** Title And Search And Filters ***********/
 .title {
-    margin-top: 1em;
+    margin-top: 0.5em;
     margin-bottom: 2em;
 }
 
@@ -211,14 +164,13 @@ header {
     text-align: center;
 }
 
-.search-button {
+.search-button { /*apply colors to both search buttons*/
     color: #FFFFFF;
     background-color: #0065FC;
     border: 1px solid #0065FC;
-
 }
 
-button.search-button.screen {
+button.search-button.screen { /* apply borders to search button*/
     display: inline-block;
     height: 50px;
     width: 132px;
@@ -227,17 +179,16 @@ button.search-button.screen {
     border-radius: 0px 15px 15px 0px;
 }
 
-button.search-button.responsive {
+button.search-button.responsive { /*hide search icon*/
     display: none;
 }
 
 @media (max-width: 768px) {
-
-    button.search-button.screen {
+    button.search-button.screen { /*hide full screen search button */
         display: none;
     }
 
-    button.search-button.responsive {
+    button.search-button.responsive { /*apply border to search button*/
         display: inline-block;
         max-width: 100%;
         width: 49px;
@@ -245,7 +196,7 @@ button.search-button.responsive {
         border-radius: 15px 15px 15px 15px;
     }
 
-    button.search-button.responsive i {
+    button.search-button.responsive i { /* apply white color to seach icon*/
         color: #FFFFFF;
     }
 }
@@ -350,11 +301,57 @@ button.search-button.responsive {
     }
 }
 
-/* Small devices (phones, less than 768px) */
+/* Small devices (phones, less than 768px) - general*/
 @media (max-width: 767.98px) {
     main {
         width: 100%;
         padding: 0 20px;
         box-sizing: border-box;
     }
+}
+
+/*small devices (phones, less than 768px) - header*/
+@media (max-width: 768px) {
+    
+    header {
+        height: 100px;
+        width: 100%;
+        padding: 30px 0px 10px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+    }
+
+    .links-text { /* IOT take all width*/
+        width: 100%;
+        height: 90px;
+    }
+
+    .sub-links-text { /*share equal width between links*/
+        width: calc(100% / 2);
+        position: relative;
+        top: 10px;
+    }
+
+    .element-sub-links-text { /*apply permanent solid grey bottom border to text links*/
+        margin: 20px 0px 10px 0px;
+        border-bottom: 2px solid #F2F2F2;
+        padding-bottom: 15px;
+        display: flex; /* center text in his box*/
+        justify-content: center; /*center text in his box */
+    }
+
+    .main-container { /*IOT free all width for header */
+        padding: 0px 0px;
+        width: 100%;
+    }
+
+    /******** hover ********/
+
+    .element-sub-links-text:hover { /* apply hover to text links */
+        color: #0065FC;
+        border-top: none;
+        border-bottom: 2px solid #0065FC;
+        padding-bottom: 15px;
 }
