@@ -1,0 +1,160 @@
+.search {
+    /* make an all width container */
+    width: 100%;
+    height: 50px;
+}
+
+.search-container {
+    /* use of flexbox to keep it in row */
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.search-icon {
+    /* make it a square */
+    height: 50px;
+    width: 50px;
+    position: relative;
+    right: 8px;
+}
+
+.search-icon i {
+    /* IOT to keep it on left side */
+    position: relative;
+    /* above inpute */
+    z-index: 2;
+    /* icon properties */
+    height: 18px;
+    width: 14px;
+    padding: 15px 18px 16px 18px;
+    background: #F2F2F2;
+    border: 1px solid #F2F2F2;
+    border-radius: 15px 0px 0px 15px;
+}
+
+.search-text {
+    /* place holder container */
+    position: relative;
+    /* zindex IOT be below other buttons */
+    z-index: 1;
+    display: flex;
+    width: 377px;
+    /* right IOT to cover icon space */
+    right: 50px;
+    border: 1px solid #F2F2F2;
+    border-radius: 15px;
+    /* IOT to be pixel perfect centered */
+    padding-left: 64px;
+}
+
+input::-moz-placeholder {
+    /* placeholder properties */
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    /* must specify opacity for moz */
+    opacity: 1;
+}
+
+input::-webkit-input-placeholder {
+    /* placeholder properties */
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    opacity: 1;
+}
+
+input::placeholder {
+    /* placeholder properties */
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    opacity: 1;
+}
+
+input:placeholder-shown {
+    /* placeholder-shown  properties */
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    opacity: 1;
+}
+
+.search-button.screen {
+    /* relative for zindex */
+    position: relative;
+    z-index: 3;
+    /* IOT center icon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0065FC;
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFFFFF;
+    width: 132px;
+    right: 182px;
+    border: 1px solid #0065FC;
+    border-radius: 0px 15px 15px 0px;
+}
+
+.search-button.responsive {
+    /* IOT hide responsive button */
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .search {
+        /* IOT to occupy full width */
+        width: 100%;
+    }
+    
+    .search-container {
+        /* IOT to occupy all width */
+        width: 100%;
+        /* IOT to place button right */
+        justify-content: space-between;
+    }
+
+    .search-text {
+        /* adapt width to full size */ 
+        width: 100%;
+        display: inline-block;
+        /* IOT to make full size bar */
+        position: absolute;
+        /* must specify height cause of absolute */
+        height: 50px;
+        /* IOT to cancel 50px right for desktop */
+        right: 0px;
+        /* IOT to be pixel perfect */
+        padding-left: 84px;
+    }
+
+    button.search-button.screen {
+        /*hide full screen search button */ 
+        display: none;
+    }
+
+    button.search-button.responsive { /*apply border to search button*/
+        display: inline-block;
+        /* IOT to allow zindex */
+        position: relative;
+        z-index: 4;
+        /* 100% of his container width */
+        max-width: 100%;
+        /* IOT to keep it as a square */
+        min-width: 50px;
+        width: 50px;
+        height: 50px;
+        /* properties */
+        /* IOT to place button right */
+        left: 8px;
+        background-color: #0065FC;
+        border: 1px solid #0065FC;
+        border-radius: 15px 15px 15px 15px;
+    }
+
+    button.search-button.responsive i { /* apply white color to seach icon*/
+        color: #FFFFFF;
+    }
+}

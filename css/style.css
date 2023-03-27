@@ -17,6 +17,8 @@ body {
     width: 100%;
     margin: 0px;
     display: flex;
+    /* add of flex direction */
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -63,6 +65,7 @@ h3 {
 
 /****** Header ***********/
 header {
+    /* properties for all header */
     max-width: 1440px;
     height: 79px;
     background-color: #FFFFFF;
@@ -72,17 +75,25 @@ header {
     align-items: center;
 }
 
+.links-logo {
+    display: flex;
+}
+
 .element-links-logo {
+    /* adjust pixel perfect position of logo */
     position: relative;
     top: 10px;
+    left: 50px;
 }
 
 .links-text {
+    /* no wrap IOT match responsive easily */
     display: flex;
     flex-flow: row nowrap;
 }
 
 .element-sub-links-text {
+    /* general properties for text links + pixel perfect position */
     font-size: 16px;
     font-weight: 400;
     color: black;
@@ -105,100 +116,108 @@ header {
 }
 
 .search {
-    margin-top: 2.5em;
+    /* make an all width container */
+    width: 100%;
+    height: 50px;
 }
 
 .search-container {
+    /* use of flexbox to keep it in row */
     display: flex;
+    flex-flow: row nowrap;
+}
+
+.search-icon {
+    /* make it a square */
+    height: 50px;
+    width: 50px;
+    position: relative;
+    right: 8px;
 }
 
 .search-icon i {
-    background-color: #F2F2F2;
-    display: inline-block;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;
-    height: 48px;
+    /* IOT to keep it on left side */
+    position: relative;
+    /* above inpute */
+    z-index: 2;
+    /* icon properties */
+    height: 18px;
+    width: 14px;
+    padding: 15px 18px 15px 18px;
+    background: #F2F2F2;
     border: 1px solid #F2F2F2;
     border-radius: 15px 0px 0px 15px;
 }
 
 .search-text {
-    display: inline-block;
+    /* place holder container */
+    position: relative;
+    /* zindex IOT be below other buttons */
+    z-index: 1;
+    display: flex;
+    width: 377px;
+    /* right IOT to cover icon space */
+    right: 50px;
+    border: 1px solid #F2F2F2;
+    border-radius: 15px;
+    /* IOT to be pixel perfect centered */
+    padding-left: 64px;
+}
+
+input::-moz-placeholder {
+    /* placeholder properties */
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    /* must specify opacity for moz */
+    opacity: 1;
+}
+
+input::-webkit-input-placeholder {
+    /* placeholder properties */
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    opacity: 1;
+}
+
+input::placeholder {
+    /* placeholder properties */
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    opacity: 1;
+}
+
+input:placeholder-shown {
+    /* placeholder-shown  properties */
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    opacity: 1;
+}
+
+.search-button.screen {
+    /* relative for zindex */
+    position: relative;
+    z-index: 3;
+    /* IOT center icon */
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
-    height: 50px;
-    width: 195px;
-    border: 1px solid #F2F2F2;
-    border-right: none;
-    border-left: none;
-}
-
-.search-text:modal {
-    font-weight: 700;
-    font-size: 18px;
-    color: #000000;
-    text-align: center;
-}
-
-.search-text::-moz-placeholder {
-    font-weight: 700;
-    font-size: 18px;
-    color: #000000;
-    text-align: center;
-}
-
-.search-text::-webkit-input-placeholder {
-    font-weight: 700;
-    font-size: 18px;
-    color: #000000;
-    text-align: center;
-}
-
-.search-text:active {
-    font-weight: 700;
-    font-size: 18px;
-    color: #000000;
-    text-align: center;
-}
-
-.search-button { /*apply colors to both search buttons*/
-    color: #FFFFFF;
     background-color: #0065FC;
-    border: 1px solid #0065FC;
-}
-
-button.search-button.screen { /* apply borders to search button*/
-    display: inline-block;
-    height: 50px;
-    width: 132px;
-    font-weight: 700;
     font-size: 18px;
+    font-weight: 700;
+    color: #FFFFFF;
+    width: 132px;
+    right: 182px;
+    border: 1px solid #0065FC;
     border-radius: 0px 15px 15px 0px;
 }
 
-button.search-button.responsive { /*hide search icon*/
+.search-button.responsive {
+    /* IOT hide responsive button */
     display: none;
-}
-
-@media (max-width: 768px) {
-    button.search-button.screen { /*hide full screen search button */
-        display: none;
-    }
-
-    button.search-button.responsive { /*apply border to search button*/
-        display: inline-block;
-        max-width: 100%;
-        width: 49px;
-        height: 49px;
-        border-radius: 15px 15px 15px 15px;
-    }
-
-    button.search-button.responsive i { /* apply white color to seach icon*/
-        color: #FFFFFF;
-    }
 }
 
 /****** Hebergements And Populaires ***********/
@@ -308,10 +327,8 @@ button.search-button.responsive { /*hide search icon*/
         padding: 0 20px;
         box-sizing: border-box;
     }
-}
 
-/*small devices (phones, less than 768px) - header*/
-@media (max-width: 768px) {
+    /* !!!!!! HEADER !!!!!! */
     
     header {
         height: 100px;
@@ -321,6 +338,12 @@ button.search-button.responsive { /*hide search icon*/
         flex-direction: column;
         justify-content: flex-start;
         flex-wrap: nowrap;
+    }
+
+    .element-links-logo {
+        justify-content: center;
+        position: relative;
+        left: 0px;
     }
 
     .links-text { /* IOT take all width*/
@@ -354,4 +377,60 @@ button.search-button.responsive { /*hide search icon*/
         border-top: none;
         border-bottom: 2px solid #0065FC;
         padding-bottom: 15px;
+    }
+
+    /* !!!!!!!! SEARCH BOX !!!!!! */
+    .search-container {
+        /* IOT to align button to the right */
+        justify-content: space-between;
+        /* IOT to position children : class= search-text */
+        position: relative;
+    }
+
+    .search-icon {
+        /* IOT to align icon pixel perfect */
+        left: 1px;
+    }
+
+    .search-text {
+        /* adapt width to full size */ 
+        width: 100%;
+        display: inline-block;
+        /* IOT to make full size bar */
+        position: absolute;
+        /* must specify height cause of absolute */
+        height: 50px;
+        /* IOT to cancel 50px right for desktop */
+        right: 0px;
+        /* IOT to be pixel perfect */
+        padding-left: 84px;
+    }
+
+    button.search-button.screen {
+        /*hide full screen search button */ 
+        display: none;
+    }
+
+    button.search-button.responsive { /*apply border to search button*/
+        display: inline-block;
+        /* IOT to allow zindex */
+        position: relative;
+        z-index: 4;
+        /* 100% of his container width */
+        max-width: 100%;
+        /* IOT to keep it as a square */
+        min-width: 50px;
+        width: 50px;
+        height: 50px;
+        /* properties */
+        /* IOT to place button right */
+        /* left: 8px; */
+        background-color: #0065FC;
+        border: 1px solid #0065FC;
+        border-radius: 15px 15px 15px 15px;
+    }
+
+    button.search-button.responsive i { /* apply white color to seach icon*/
+        color: #FFFFFF;
+    }
 }
