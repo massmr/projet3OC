@@ -19,17 +19,19 @@ body {
     display: flex;
     /* add of flex direction */
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
 }
 
 .main-container {
+    /* to occupy full width */
     width: 100%;
+    /* to max width for wide screen */
     max-width: 1440px;
     padding: 0 50px;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 }
 
-.section-title {
+h2 {
     margin: 0;
     font-size: 22px;
 }
@@ -72,8 +74,13 @@ h4 {
 /****** Header ***********/
 header {
     /* properties for all header */
+    /* to max width for wide screens */
     max-width: 1440px;
+    /* to apply spacebetween */
+    width: 100%;
     height: 79px;
+    padding: 0px 50px;
+    box-sizing: border-box;
     background-color: #FFFFFF;
     display: flex;
     flex-flow: row wrap;
@@ -89,7 +96,6 @@ header {
     /* adjust pixel perfect position of logo */
     position: relative;
     top: 10px;
-    left: 50px;
 }
 
 .links-text {
@@ -115,11 +121,15 @@ header {
     border-top: 2px solid #0065FC;
 }
 
+.element-sub-links-text.activites {
+    margin: 0px 0px 34.5px 34.5px;
+}
+
 /****** Title And Search And Filters ***********/
 
 /* !!!!!! TITLE !!!!!! */
 .title {
-    margin-top: 0.5em;
+    margin-top: 30px;
     margin-bottom: 2em;
 }
 
@@ -250,7 +260,7 @@ input:placeholder-shown {
 }
 .filter-element-container {
     display: flex;
-    /* wrap between elements */
+    /* nowrap between elements */
     flex-flow: row nowrap;
     gap: 15px;
 }
@@ -370,6 +380,7 @@ input:placeholder-shown {
         margin-bottom: 20px;
     }
 
+    /* !!!!!! HEBERGEMENT !!!!!! */
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -406,7 +417,7 @@ input:placeholder-shown {
 @media (max-width: 767.98px) {
     main {
         width: 100%;
-        padding: 0 20px;
+        padding: 40px 20px 0px 20px;
         box-sizing: border-box;
     }
 
@@ -440,18 +451,22 @@ input:placeholder-shown {
     }
 
     .element-sub-links-text { /*apply permanent solid grey bottom border to text links*/
-        margin: 20px 0px 10px 0px;
+        margin: 20px 0px 0px 0px;
         border-bottom: 2px solid #F2F2F2;
         padding-bottom: 15px;
         display: flex; /* center text in his box*/
         justify-content: center; /*center text in his box */
     }
 
+    .element-sub-links-text.activites {
+        margin: 20px 0px 0px 0px;
+    }
+
     .main-container { /*IOT free all width for header */
         padding: 0px 0px;
         width: 100%;
     }
-
+    
     /******** hover ********/
 
     .element-sub-links-text:hover { /* apply hover to text links */
@@ -459,6 +474,11 @@ input:placeholder-shown {
         border-top: none;
         border-bottom: 2px solid #0065FC;
         padding-bottom: 15px;
+    }
+
+    /* !!!!!! TITLE !!!!!! */
+    .title {
+        margin-top: 1em;
     }
 
     /* !!!!!!!! SEARCH BOX !!!!!! */
@@ -514,5 +534,20 @@ input:placeholder-shown {
 
     button.search-button.responsive i { /* apply white color to seach icon*/
         color: #FFFFFF;
+    }
+
+    /* !!!!!! FILTERS !!!!!! */
+    .filter-main-container {
+        flex-wrap: wrap;
+    }
+
+    .filter-element-container {
+        /* to occupy sull width */
+        width: 100%;
+    }
+
+    .filter-element {
+        /* to divide width in equal parts */
+        width: calc(100% / 2);
     }
 }
