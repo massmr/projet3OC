@@ -35,6 +35,12 @@ body {
 }
 
 h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0px;
+}
+
+h4 {
     font-size: 16px;
     font-weight: 400;
     margin: 8px 0px 30px 0px;
@@ -110,11 +116,14 @@ header {
 }
 
 /****** Title And Search And Filters ***********/
+
+/* !!!!!! TITLE !!!!!! */
 .title {
     margin-top: 0.5em;
     margin-bottom: 2em;
 }
 
+/* !!!!!! SEARCH BAR !!!!!! */
 .search {
     /* make an all width container */
     width: 100%;
@@ -144,6 +153,7 @@ header {
     height: 18px;
     width: 14px;
     padding: 15px 18px 15px 18px;
+    color: #000000;
     background: #F2F2F2;
     border: 1px solid #F2F2F2;
     border-radius: 15px 0px 0px 15px;
@@ -220,6 +230,69 @@ input:placeholder-shown {
     display: none;
 }
 
+/* !!!!!! FILTER !!!!!! */
+.filter {
+    /* separate with search bar */
+    margin-top: 35px;
+    display: flex;
+    /* wrap title and container */
+    flex-flow: row wrap;
+    /* center 2nd direction : title and elements */
+    align-items: center;
+    /* gap between title and container */
+    gap: 15px;
+}
+
+.filter-main-container {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 15px;
+}
+.filter-element-container {
+    display: flex;
+    /* wrap between elements */
+    flex-flow: row nowrap;
+    gap: 15px;
+}
+
+.filter-element {
+    display: flex;
+    /* icon and text mustnt change place between each others */
+    flex-flow: row nowrap;
+    align-items: center;
+    /* not 50 bc od 2px border each side */
+    height: 46px;
+    padding: 0px 19px 0px 21.5px;
+    border: 2px solid #D9D9D9;
+    border-radius: 25px;
+}
+
+.filter-element p {
+    /* cancel margin */
+    margin: 0px;
+}
+
+.filter-element:hover {
+    background-color: #DEEBFF;
+}
+
+.economique {
+    /* gap between icon and text */
+    gap: 10px;
+}
+
+.familial {
+    gap: 14.56px;
+}
+
+.romantique {
+    gap: 10px;
+}
+
+.pepites {
+    gap: 11.5px;
+}
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
@@ -288,6 +361,15 @@ input:placeholder-shown {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+    /* !!!!!! FILTERS !!!!!! */
+    .filter {
+        display: block;
+    }
+
+    .filter-title {
+        margin-bottom: 20px;
+    }
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
