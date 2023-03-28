@@ -45,7 +45,6 @@ h3 {
 h4 {
     font-size: 16px;
     font-weight: 400;
-    margin: 8px 0px 30px 0px;
 }
 
 .card {
@@ -131,6 +130,10 @@ header {
 .title {
     margin-top: 30px;
     margin-bottom: 2em;
+}
+
+.section-title-h4 {
+    margin: 8px 0px 30px 0px;
 }
 
 /* !!!!!! SEARCH BAR !!!!!! */
@@ -302,6 +305,35 @@ input:placeholder-shown {
 .pepites {
     gap: 11.5px;
 }
+
+/****** Info ***********/
+.info {
+    max-width: 1440px;
+    width: 100%;
+    padding: 37.5px 0px;
+}
+
+.info-container {
+    width: 100%;
+    height: 24px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-container i {
+    width: 4px;
+    height: 10px;
+    padding: 7px 10px;
+    border: 1px solid #D9D9D9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
 
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
