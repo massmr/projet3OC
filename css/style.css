@@ -820,9 +820,26 @@ input:placeholder-shown, input:focus {
     }
 }
 
-/* to avoid screen size problem below 350px */
+/* everything after is to avoid size problem under 350px width */
 @media (max-width: 350px) {
     .filter-element p {
+        /* resize filter texts */
         font-size: 12px;
     }
+}
+
+@media (max-width: 340px) {
+    input::-moz-placeholder, input::-webkit-input-placeholder, input::placeholder, 
+    input:placeholder-shown, input:focus {
+    /* resize placeholder */
+    font-size: 16px;
+    }  
+}
+
+@media (max-width: 330px) {
+    input::-moz-placeholder, input::-webkit-input-placeholder, input::placeholder, 
+    input:placeholder-shown, input:focus {
+    /* resize placeholder */
+    font-size: 15.5px;
+    }  
 }
