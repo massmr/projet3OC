@@ -27,6 +27,7 @@ body {
     width: 100%;
     /* to max width for wide screen */
     max-width: 1440px;
+    height: 100%;
     padding: 0 50px;
     box-sizing: border-box;
 }
@@ -545,6 +546,28 @@ input:placeholder-shown, input:focus {
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
+/******* Footer *******/
+footer {
+    width: 100%;
+    height: 163px;
+    margin-top: 125px;
+}
+
+.footer {
+    background-color: #F2F2F2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+footer section {
+    padding: 20px 0px 0px 20px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #000000;
+}
+
 /****** Media queries ***********/
 
 /* Medium devices (tablets, less/equal than 1024px) */
@@ -600,6 +623,11 @@ input:placeholder-shown, input:focus {
     .activites img {
         /* modify height */
         height: 200px;
+    }
+
+    /********** Footer **********/
+    footer {
+        margin-top: 65px;
     }
 }
 
@@ -766,7 +794,8 @@ input:placeholder-shown, input:focus {
         padding: 35px 20px 35px 20px;
     }
 
-    /********** Hébergements *********/
+    /********** Hébergements and populaires *********/
+    /* !!!!!! Hébergement !!!!!! */
     .hebergements {
         height: 100%;
     }
@@ -809,7 +838,9 @@ input:placeholder-shown, input:focus {
     /* !!!!!!! Populaires !!!!!!! */
 
     .populaires {
+        /* adjust to responsive height */
         height: 569px;
+        /* full width background */
         width: 100%;
         margin: 0px;
     }
@@ -836,6 +867,7 @@ input:placeholder-shown, input:focus {
     }
 
     .activites {
+        /* to occupy full width, with margin left and right */
         width: 100%;
         margin: 0px 30px;
     }
@@ -851,9 +883,34 @@ input:placeholder-shown, input:focus {
         grid-template-rows: 1fr 1fr 1fr 1fr;
         gap: 15px;
     }
+
+    /********* Footer **********/
+    footer {
+        /* full height */
+        height: 100%;
+        /* to compensate with main margin */
+        margin-top: 25px;
+    }
+    
+    .footer {
+        /* easier to fit in display flex for responsive screen */
+        display: flex;
+        flex-flow: column nowrap;
+        /* to adjust responsive gap */
+        gap: 39px;
+    }
+    
+    footer section {
+        /* to adjust to responsive padding */
+        padding: 0px 0px 0px 30px;
+    }
+
+    .apropos {
+        margin-top: 30px;
+    }
 }
 
-/* everything after is to avoid size problem under 350px width */
+/* everything after is to avoid size bugs under 350px width */
 @media (max-width: 350px) {
     .filter-element p {
         /* resize filter texts */
