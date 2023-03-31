@@ -627,26 +627,32 @@ input:placeholder-shown, input:focus {
         left: 0px;
     }
 
-    .links-text { /* IOT take all width*/
+    .links-text { 
+        /* IOT take all width*/
         width: 100%;
         height: 90px;
     }
 
-    .sub-links-text { /*share equal width between links*/
+    .sub-links-text { 
+        /*share equal width between links*/
         width: calc(100% / 2);
         position: relative;
         top: 10px;
     }
 
-    .element-sub-links-text { /*apply permanent solid grey bottom border to text links*/
+    .element-sub-links-text { 
+        /*apply permanent solid grey bottom border to text links*/
         margin: 20px 0px 0px 0px;
         border-bottom: 2px solid #F2F2F2;
         padding-bottom: 15px;
-        display: flex; /* center text in his box*/
-        justify-content: center; /*center text in his box */
+        /* center text in his box*/
+        display: flex; 
+        justify-content: center;
     }
 
     .element-sub-links-text.activites {
+        /* to cover full width */
+        width: 100%;
         margin: 20px 0px 0px 0px;
     }
 
