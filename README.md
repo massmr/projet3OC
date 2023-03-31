@@ -7,6 +7,7 @@ General :
 fonts : railway -sans serif
 
 html tree :
+
 body
     Header
         Logo
@@ -49,7 +50,8 @@ body
                     img
                     content
                         title
-                        text                     star icons
+                        text                     
+                        star icons
                 card2
                 card3
         Activites
