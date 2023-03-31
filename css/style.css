@@ -14,7 +14,7 @@
 }
 
 body {
-    width: 100%;
+    /* to adjust header links hover */
     margin: 0px;
     display: flex;
     /* add of flex direction */
@@ -24,7 +24,7 @@ body {
 
 .main-container {
     /* to occupy full width */
-    width: 100%;
+    /* width: 100%; */
     /* to max width for wide screen */
     max-width: 1440px;
     height: 100%;
@@ -159,16 +159,18 @@ header {
 .search-icon i {
     /* IOT to keep it on left side */
     position: relative;
+    top: 0.5px;
+    left: 1px;
     /* above inpute */
     z-index: 2;
     /* icon properties */
     height: 18px;
     width: 14px;
-    padding: 15px 18px 15px 18px;
+    padding: 14px 18px 15px 18px;
     color: #000000;
     background: #F2F2F2;
-    border: 1px solid #F2F2F2;
-    border-radius: 15px 0px 0px 15px;
+    border: 0.5px solid #F2F2F2;
+    border-radius: 14px 0px 0px 14px;
 }
 
 .search-text {
@@ -186,16 +188,46 @@ header {
     padding-left: 64px;
 }
 
-input::-moz-placeholder, input::-webkit-input-placeholder, input::placeholder, 
-input:placeholder-shown, input:focus {
-    /* placeholder properties */
+input::placeholder {
+    /* general */
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;
+}
+
+input::-moz-placeholder {
+    /* moz ff*/
     font-size: 18px;
     font-weight: 700;
     color: black;
     /* must specify opacity for moz */
     opacity: 1;
 }
+
+input::-webkit-input-placeholder {
+    /* chrome */
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;
+}
  
+input:focus {
+    /* when users writing */
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;
+    outline: none;
+    border: 1px solid;
+    border-color: #0065FC;
+}
+
+input:placeholder-shown {
+    /* when users writing */
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;
+}
+
 .search-button.screen {
     /* relative for zindex */
     position: relative;
@@ -791,7 +823,11 @@ footer a {
 
     /********** Info *********/
     .info {
-        padding: 35px 20px 35px 20px;
+        padding: 35px 0px;
+    }
+
+    .info-container {
+        padding: 0px 20px;
     }
 
     /********** Hébergements and populaires *********/
@@ -881,14 +917,20 @@ footer a {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
-        gap: 15px;
+        /* adjust gap */
+        gap: 80px;
+    }
+
+    .activites-cards a {
+        /* fixed height */
+        height: 200px;
     }
 
     /********* Footer **********/
     footer {
         /* full height */
         height: 100%;
-        /* to compensate with main margin */
+        /* to compensate with main container margin */
         margin-top: 25px;
     }
     
@@ -898,6 +940,8 @@ footer a {
         flex-flow: column nowrap;
         /* to adjust responsive gap */
         gap: 39px;
+        /* adjust with previous div */
+        margin-top: 65px;
     }
     
     footer section {
@@ -919,17 +963,49 @@ footer a {
 }
 
 @media (max-width: 340px) {
-    input::-moz-placeholder, input::-webkit-input-placeholder, input::placeholder, 
-    input:placeholder-shown, input:focus {
-    /* resize placeholder */
-    font-size: 16px;
+    input::-moz-placeholder {
+        /* resize placeholder */
+        font-size: 16px;
     }  
+
+    input:focus {
+        font-size: 16px;
+    }
+
+    input::placeholder {
+        font-size: 16px;
+    }
+
+    input:placeholder-shown {
+        font-size: 16px;
+    }
+
+    input::-webkit-input-placeholder {
+        /* chrome */
+        font-size: 16px;
+    }
 }
 
 @media (max-width: 330px) {
-    input::-moz-placeholder, input::-webkit-input-placeholder, input::placeholder, 
-    input:placeholder-shown, input:focus {
-    /* resize placeholder */
-    font-size: 15.5px;
+    input::-moz-placeholder {
+        /* resize placeholder */
+        font-size: 15.5px;
     }  
+
+    input:focus {
+        font-size: 15.5px;
+    }
+
+    input::placeholder {
+        font-size: 15.5px;
+    }
+
+    input:placeholder-shown {
+        font-size: 15.5px;
+    }
+
+    input::-webkit-input-placeholder {
+        /* chrome */
+        font-size: 15.5px;
+    }
 }
