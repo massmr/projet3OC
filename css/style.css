@@ -50,7 +50,6 @@ h4 {
 .card {
     background-color: white;
     border-radius: 20px;
-    padding: 5px;
 }
 
 .card img {
@@ -364,6 +363,8 @@ input:placeholder-shown, input:focus {
     flex-flow: column nowrap;
     width: 100%;
     height: 207px;
+    /* to make a space between image and card container */
+    padding: 5px;
 }
 
 .hebergements-cards img {
@@ -435,6 +436,8 @@ input:placeholder-shown, input:focus {
     /* to avoid going into container margin */
     width: 96%;
     margin-top: 0px;
+    /* to make a space between image and card container */
+    padding: 5px;
 }
 
 .populaires-cards img {
@@ -469,49 +472,74 @@ input:placeholder-shown, input:focus {
 
 /*********** Activites ***********/
 .div-activites {
+    /* occupy all witdh */
+    width: 100%;
+    /*  then center all activite */
     display: flex;
     justify-content: center;
 }
 
+.activites {
+    /* only allocate 95% of width */
+    width: 95%;
+}
+
+.activites-container {
+    /* organize title and card in columns with no wrap */
+    display: flex;
+    flex-flow: column nowrap;
+}
+
 .activites-title {
+    /* make a space btwn title and cards */
     margin-bottom: 30px;
 }
 
 .activites-cards {
+    /* fixed height for desktops */
     height: 380px;
+    /* occupy full witdh into the 95% width fm parent allocated */
+    width: 100%;
+    /* make a grid 1 row and 4 column, 1 per element, 30px gap */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
 }
 
-.activites-cards .card {
-    width: 297.5px;
+.activites-cards.card {
+    /* to allow img to fit all the card */
+    padding: 0px;
+    background-color: #FFFFFF;
 }
 
 .activites img {
+    /* to fit full card width */
     width: 100%;
+    /* fixed height */
     height: 380px;
-    object-fit: cover;
+    /* to make the radius */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
-.activites-card {
-    display: flex;
-
-}
-
-.activites-card-title { 
+.activites-card-title {
+   /* fixed height */
+   height: 59px; 
+   /* to center the title inside the card */
    display: flex;
    flex-direction: column;
-   height: 59px;
    justify-content: center;
-}
-
-.activites-card-title .pomegues {
-    justify-content: center;
+   /* to align title inside the card */
+   padding-left: 19px;
+   /* to make the radius */
+   border-bottom-left-radius: 20px;
+   border-bottom-right-radius: 20px;
 }
 
 .activites a {
     text-decoration: none;
     color: #000000;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
@@ -562,6 +590,15 @@ input:placeholder-shown, input:focus {
         margin-top: 30px;
     }
     
+    /* !!!!!!! ACTIVITES !!!!!!! */
+    .activites-cards {
+        height: 100%;
+    }
+
+    .activites img {
+        /* modify height */
+        height: 200px;
+    }
 }
 
 /* Small devices (phones, less than 768px) - general*/
