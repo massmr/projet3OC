@@ -478,6 +478,8 @@ input:placeholder-shown, input:focus {
     /*  then center all activite */
     display: flex;
     justify-content: center;
+    /* to space with previous div */
+    margin-top: 65px;
 }
 
 .activites {
@@ -543,9 +545,8 @@ input:placeholder-shown, input:focus {
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
-/* Le code ci-dessous correspond à la version responsive uniquement */
-
 /****** Media queries ***********/
+
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1080px) {
     /* !!!!!! FILTERS !!!!!! */
@@ -608,6 +609,11 @@ input:placeholder-shown, input:focus {
         width: 100%;
         padding: 40px 0px;
         box-sizing: border-box;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
     }
 
     /* !!!!!! HEADER !!!!!! */
@@ -761,6 +767,9 @@ input:placeholder-shown, input:focus {
     }
 
     /********** Hébergements *********/
+    .hebergements {
+        height: 100%;
+    }
 
     .hebergements-and-populaires {
         flex-direction: row;
@@ -797,6 +806,8 @@ input:placeholder-shown, input:focus {
         margin-right: 15px;
     }
 
+    /* !!!!!!! Populaires !!!!!!! */
+
     .populaires {
         height: 569px;
         width: 100%;
@@ -817,6 +828,28 @@ input:placeholder-shown, input:focus {
         width: 100%;
         /* to adjust pixel perfect */
         margin-right: 30px;
+    }
+
+    /******** ACTIVITES *******/
+    .div-activites {
+        margin-top: 35px;
+    }
+
+    .activites {
+        width: 100%;
+        margin: 0px 30px;
+    }
+
+    .activites-cards {
+        /* fixed height for desktops */
+        height: 100%;
+        /* occupy full witdh into the 95% width fm parent allocated */
+        width: 100%;
+        /* make a grid 1 row and 4 column, 1 per element, 30px gap */
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 15px;
     }
 }
 
