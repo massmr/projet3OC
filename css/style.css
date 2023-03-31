@@ -289,7 +289,8 @@ input:placeholder-shown, input:focus {
 }
 
 .info-container {
-    width: 100%;
+    /* to allow text to move line above sooner */
+    width: 90%;
     height: 24px;
     display: flex;
     flex-flow: row nowrap;
@@ -306,7 +307,6 @@ input:placeholder-shown, input:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 
