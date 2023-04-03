@@ -7,6 +7,7 @@
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
+    --placeholder-color: #000000;
 }
 
 .fa-solid {
@@ -46,6 +47,7 @@ h3 {
 h4 {
     font-size: 16px;
     font-weight: 400;
+    margin: 0px;
 }
 
 .card {
@@ -70,11 +72,10 @@ h4 {
 }
 
 /****** Header ***********/
-header {
+.nav {
     /* properties for all header */
     /* to max width for wide screens */
     max-width: 1440px;
-    /* to apply spacebetween */
     width: 100%;
     height: 79px;
     padding: 0px 50px;
@@ -86,41 +87,37 @@ header {
     align-items: center;
 }
 
-.links-logo {
-    display: flex;
-}
-
-.element-links-logo {
-    /* adjust pixel perfect position of logo */
-    position: relative;
-    top: 10px;
-}
-
-.links-text {
+.nav__div {
     /* no wrap IOT match responsive easily */
     display: flex;
     flex-flow: row nowrap;
 }
 
-.element-sub-links-text {
+.logo img{
+    width: 61.09px;
+    height: 19px;
+    position: relative;
+    top: 10px;
+}
+
+.link {
     /* general properties for text links + pixel perfect position */
-    font-size: 16px;
-    font-weight: 400;
     color: black;
     text-decoration: none;
-    margin: 0px 34.5px 34.5px 34.5px;
     padding-top: 18px;
     position: relative;
-    bottom: 10px;
+    bottom: 3px;
+    margin: 0px 0px 34.5px 34.5px;
+    border-top: 2px solid transparent;
 }
 
-.element-sub-links-text:hover { /*hover mode*/
+.link__hebergement {
+    margin: 0px 34.5px 34.5px 34.5px;
+}
+
+.link:hover { /*hover mode*/
     color: #0065FC;
     border-top: 2px solid #0065FC;
-}
-
-.element-sub-links-text.activites {
-    margin: 0px 0px 34.5px 34.5px;
 }
 
 /****** Title And Search And Filters ***********/
@@ -136,29 +133,32 @@ header {
 }
 
 /* !!!!!! SEARCH BAR !!!!!! */
-.search {
+.form {
     /* make an all width container */
     width: 100%;
     height: 50px;
 }
 
-.search-container {
+.form__container {
     /* use of flexbox to keep it in row */
     display: flex;
     flex-flow: row nowrap;
+    width: 100%;
 }
 
-.search-icon {
-    /* make it a square */
-    height: 50px;
-    width: 50px;
+.form__position {
     position: relative;
+}
+
+.form__icon {
+    /* make it a square */
+    height: 51px;
+    width: 50px;
     right: 0px;
 }
 
-.search-icon i {
+.form__icon i {
     /* IOT to keep it on left side */
-    position: relative;
     top: 0.5px;
     left: 1px;
     /* above inpute */
@@ -173,13 +173,12 @@ header {
     border-radius: 14px 0px 0px 14px;
 }
 
-.search-text {
-    /* place holder container */
-    position: relative;
+.form__input {
     /* zindex IOT be below other buttons */
     z-index: 1;
     display: flex;
     width: 377px;
+    height: 50px;
     /* right IOT to cover icon space */
     right: 50px;
     border: 1px solid #F2F2F2;
@@ -188,68 +187,71 @@ header {
     padding-left: 64px;
 }
 
-input::placeholder {
-    /* general */
+input {
     font-size: 18px;
     font-weight: 700;
-    color: #000000;
+    color: var(--placeholder-color);
+}
+
+input::placeholder {
+    color: var(--placeholder-color);
 }
 
 input::-moz-placeholder {
-    /* moz ff*/
-    font-size: 18px;
-    font-weight: 700;
-    color: black;
-    /* must specify opacity for moz */
+    color: var(--placeholder-color);
+    /* must specify opacity for moz placeholder */
     opacity: 1;
 }
 
 input::-webkit-input-placeholder {
-    /* chrome */
-    font-size: 18px;
-    font-weight: 700;
-    color: #000000;
+    color: var(--placeholder-color);
 }
  
 input:focus {
-    /* when users writing */
-    font-size: 18px;
-    font-weight: 700;
-    color: #000000;
+    color: var(--placeholder-color);
     outline: none;
     border: 1px solid;
-    border-color: #0065FC;
+    border-color: var(--main-color);
 }
 
 input:placeholder-shown {
     /* when users writing */
-    font-size: 18px;
-    font-weight: 700;
-    color: #000000;
+    color: var(--placeholder-color);
 }
 
-.search-button.screen {
-    /* relative for zindex */
-    position: relative;
+.form__button {
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+.button__color {
+    color: white;
+}
+
+.button__for--screen {
     z-index: 3;
     /* IOT center icon */
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #0065FC;
-    font-size: 18px;
-    font-weight: 700;
-    color: #FFFFFF;
     width: 132px;
     right: 182px;
-    border: 1px solid #0065FC;
     border-radius: 0px 15px 15px 0px;
 }
 
-.search-button.responsive {
+.button__for--responsive {
     /* IOT hide responsive button */
     display: none;
+    /* IOT to allow zindex */
+    z-index: 4;
+    max-width: 100%;
+    /* IOT to keep it as a square */
+    min-width: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px 15px 15px 15px;
 }
+
 
 /* !!!!!! FILTER !!!!!! */
 .filter {
@@ -264,22 +266,14 @@ input:placeholder-shown {
     gap: 15px;
 }
 
-.filter-main-container {
+.filter__container {
     display: flex;
-    flex-flow: row nowrap;
-    gap: 15px;
-}
-.filter-element-container {
-    display: flex;
-    /* nowrap between elements */
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     gap: 15px;
 }
 
-.filter-element {
-    display: flex;
-    /* icon and text mustnt change place between each others */
-    flex-flow: row nowrap;
+.filter__element {
+    gap: 0px;
     align-items: center;
     /* not 50 bc od 2px border each side */
     height: 46px;
@@ -288,13 +282,13 @@ input:placeholder-shown {
     border-radius: 25px;
 }
 
-.filter-element p {
+.filter__element p {
     /* cancel margin */
     margin: 0px;
     font-size: 16px;
 }
 
-.filter-element:hover {
+.filter__element:hover {
     background-color: #DEEBFF;
 }
 
@@ -609,7 +603,7 @@ footer a {
         display: block;
     }
 
-    .filter-title {
+    .filter__title {
         margin-bottom: 20px;
     }
 
@@ -667,70 +661,46 @@ footer a {
 @media (max-width: 780px) {
     main {
         width: 100%;
-        padding: 40px 0px;
         box-sizing: border-box;
     }
 
     .main-container {
         display: flex;
         flex-direction: column;
+        padding: 0px 20px;
+        width: 100%;
     }
 
     /* !!!!!! HEADER !!!!!! */
     
-    header {
+    .nav {
         height: 100px;
+        margin-top: 30px;
+        padding: 0px;
+        flex-flow: column nowrap;
+    }
+
+    .nav__div--link {
         width: 100%;
-        padding: 30px 0px 10px 0px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        flex-wrap: nowrap;
     }
 
-    .element-links-logo {
-        justify-content: center;
-        position: relative;
-        left: 0px;
-    }
-
-    .links-text { 
-        /* IOT take all width*/
-        width: 100%;
-        height: 90px;
-    }
-
-    .sub-links-text { 
-        /*share equal width between links*/
-        width: calc(100% / 2);
-        position: relative;
-        top: 10px;
-    }
-
-    .element-sub-links-text { 
-        /*apply permanent solid grey bottom border to text links*/
-        margin: 20px 0px 0px 0px;
-        border-bottom: 2px solid #F2F2F2;
+    .link {
+        border-bottom: 2px solid var(--main-bg-color);
         padding-bottom: 15px;
-        /* center text in his box*/
-        display: flex; 
-        justify-content: center;
+        /*IOT split the width in equal part for each link*/
+        width: calc(100% / 2);
+        margin: 0px;
+        /*text can only be centered in a block*/
+        display: inline-block;
+        text-align: center;
     }
 
-    .element-sub-links-text.activites {
-        /* to cover full width */
-        width: 100%;
-        margin: 20px 0px 0px 0px;
+    .link__hebergement {
+        margin: 0px;
     }
-
-    .main-container { /*IOT free all width for header */
-        padding: 0px 0px;
-        width: 100%;
-    }
-    
     /******** hover ********/
 
-    .element-sub-links-text:hover { /* apply hover to text links */
+    .link:hover { /* apply hover to text links */
         color: #0065FC;
         border-top: none;
         border-bottom: 2px solid #0065FC;
@@ -738,86 +708,59 @@ footer a {
     }
 
     /******** TITLE SEARCH FILTERS *********/
-    .title-search-filters {
-        padding: 0px 20px;
-    }
-
-    /* !!!!!! TITLE !!!!!! */
-    .title {
-        margin-top: 1em;
-    }
-
-    /* !!!!!!!! SEARCH BOX !!!!!! */
-    .search-container {
+    .form__container {
         /* IOT to align button to the right */
         justify-content: space-between;
-        /* IOT to position children : class= search-text */
-        position: relative;
     }
 
-    .search-icon {
+    .form__icon {
         /* IOT to align icon pixel perfect */
         left: 1px;
     }
 
-    .search-text {
-        /* adapt width to full size */ 
+    .form__input {
         width: 100%;
         display: inline-block;
-        /* IOT to make full size bar */
-        position: absolute;
-        /* must specify height cause of absolute */
-        height: 50px;
-        /* IOT to cancel 50px right for desktop */
+        /*position: absolute;*/
+        /* IOT to cancel 50px right for screen */
         right: 0px;
         /* IOT to be pixel perfect */
         padding-left: 84px;
     }
 
-    button.search-button.screen {
-        /*hide full screen search button */ 
+    .button__for--screen {
+        /*hide full screen search button */
         display: none;
     }
 
-    button.search-button.responsive { /*apply border to search button*/
+    .button__for--responsive { /*apply border to search button*/
         display: inline-block;
-        /* IOT to allow zindex */
-        position: relative;
-        z-index: 4;
-        /* 100% of his container width */
-        max-width: 100%;
-        /* IOT to keep it as a square */
-        min-width: 50px;
-        width: 50px;
-        height: 50px;
-        /* properties */
-        /* IOT to place button right */
-        /* left: 8px; */
-        background-color: #0065FC;
-        border: 1px solid #0065FC;
-        border-radius: 15px 15px 15px 15px;
     }
 
-    button.search-button.responsive i { /* apply white color to seach icon*/
-        color: #FFFFFF;
+
+    /* !!!!!! TITLE !!!!!! */
+    .title__h2 {
+        margin-bottom: 8px;
     }
+
+    /* !!!!!!!! SEARCH BOX !!!!!! */
+
 
     /* !!!!!! FILTERS !!!!!! */
-    .filter-main-container {
-        flex-wrap: wrap;
+    .filter__title {
+        margin-bottom: 20px;
     }
 
-    .filter-element-container {
-        /* to occupy sull width */
+    .filter__container {
+        flex-wrap: wrap;
         width: 100%;
     }
 
-    .filter-element {
-        /* to divide width in equal parts */
-        width: calc(100% / 2);
+    .filter__sub--container {
+        flex-flow: row nowrap;
     }
 
-    .filter-element p {
+    .filter__element p{
         font-size: 14px;
     }
 
@@ -956,56 +899,20 @@ footer a {
 
 /* everything after is to avoid size bugs under 350px width */
 @media (max-width: 350px) {
-    .filter-element p {
+    .filter__element p {
         /* resize filter texts */
         font-size: 12px;
     }
 }
 
 @media (max-width: 340px) {
-    input::-moz-placeholder {
-        /* resize placeholder */
-        font-size: 16px;
-    }  
-
-    input:focus {
-        font-size: 16px;
-    }
-
-    input::placeholder {
-        font-size: 16px;
-    }
-
-    input:placeholder-shown {
-        font-size: 16px;
-    }
-
-    input::-webkit-input-placeholder {
-        /* chrome */
+    input {
         font-size: 16px;
     }
 }
 
 @media (max-width: 330px) {
-    input::-moz-placeholder {
-        /* resize placeholder */
-        font-size: 15.5px;
-    }  
-
-    input:focus {
-        font-size: 15.5px;
-    }
-
-    input::placeholder {
-        font-size: 15.5px;
-    }
-
-    input:placeholder-shown {
-        font-size: 15.5px;
-    }
-
-    input::-webkit-input-placeholder {
-        /* chrome */
+    input {
         font-size: 15.5px;
     }
 }

@@ -16,76 +16,70 @@
 
 <body>
     <!-- integration of header -->
-    <header>
-        <!-- 2 div inside header : logo + 2 <a> -->
-        <div class="links-logo">
-            <!-- force logo size -->
-            <a class="element-links-logo" href="index.html"><img src="images/logo/Booki.png" alt="image du logo booki" width="61.09px" height="19px"></a>
+    <header class="nav">
+        <!--logo-->
+        <div class="nav__div nav__div--logo">
+            <a class="logo" href="index.html"><img src="images/logo/Booki.png" alt="image du logo booki"></a>
         </div>
-        <div class="links-text">
-            <!-- integration of 2 <a> -->
-            <!-- add of section IOT manage hover properties easily -->
-            <div class="sub-links-text">
-                <a class="element-sub-links-text hebergement" href="#ancre_hebergements">Hébergements</a>
-            </div>
-            <div class="sub-links-text">
-                <a class="element-sub-links-text activites" href="#ancre_activites">Activités</a>
-            </div>
+        <!--links-->
+        <div class="nav__div nav__div--link">
+                <a class="link link__hebergement" href="#ancre_hebergements"><h4>Hébergements</h4></a>
+                <a class="link link__activite" href="#ancre_activites"><h4>Activités</h4></a>
         </div>
     </header>
-    <!-- move div class main-container above header -->
     <div class="main-container">
         <main>
-            <!-- 1st div : title, research and filters-->
-            <section class="title-search-filters">
-                <div class="title">
-                    <h2 class="section-title">Trouvez votre hébergement pour des vacances de rêve</h2>
-                    <h4 class="section-title-h4">En plein centre-ville ou en pleine nature</h3>
-                </div>
-                <!-- search box, formulaire -->
-                <div class="search">
-                    <!-- form container -->
-                    <form class="search-container" action="" method="get">
+            <!-- title -->
+            <section class="title">
+                <h2 class="title__h2">Trouvez votre hébergement pour des vacances de rêve</h2>
+                <h4 class="title__h4">En plein centre-ville ou en pleine nature</h4>
+            </section>
+                <!-- search box -->
+            <section class="form">
+                <!-- form container -->
+                <form class="form__container form_position" action="" method="get">
                         <!-- icon left -->
-                        <label class="search-icon" for="site-search">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </label>
-                        <!-- input -->
-                        <input class="search-text" type="search" name="q" id="site-search" placeholder="Marseille, France">
-                        <!-- search buttons screen -->
-                        <button class="search-button screen" type="submit">Rechercher</button>
-                        <!-- search button responsive -->
-                        <button class="search-button responsive" type="submit">
-                            <i class="fa-solid fa-magnifying-glass"></i>                        
-                        </button>
-                    </form>
-                </div>
+                    <label class="form__position form__icon" for="site-search">
+                        <i class="form__position fa-solid fa-location-dot"></i>
+                    </label>
+                    <!-- txt txt txt -->
+                    <input class="form__position form__input" type="search" name="q" id="site-search" placeholder="Marseille, France">
+                    <!-- search buttons for screen -->
+                    <button class="form__position form__button button__for--screen" type="submit">
+                        <h3 class="button__color">Rechercher</h3>
+                    </button>
+                    <!-- search button for responsive -->
+                    <button class="form__position form__button button__for--responsive" type="submit">
+                        <i class="button__color fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </section>
                 <!-- filters -->
                 <div class="filter">
                     <!-- title div -->
-                    <div class="filter-title">
+                    <div class="filter__title">
                         <h3>Filtres</h3>
                     </div>
                     <!-- 4 elements div -->
-                    <div class="filter-main-container">
+                    <div class="filter__container">
                         <!-- 2 elements div -->
-                        <div class="filter-element-container">
-                            <div class="filter-element economique">
+                        <div class="filter__container filter__sub--container">
+                            <div class="filter__container filter__sub--container filter__element economique">
                                 <i class="fa-solid fa-money-bill-wave"></i>
                                 <p>Économique</p>
                             </div>
-                            <div class="filter-element familial">
+                            <div class="filter__container filter__sub--container filter__element familial">
                                 <i class="fa-solid fa-person"></i>
                                 <p>Familial</p>
                             </div>
                         </div>
                         <!-- 2 elements div -->
-                        <div class="filter-element-container">    
-                            <div class="filter-element romantique">
+                        <div class="filter__container filter__sub--container">
+                            <div class="filter__container filter__sub--container filter__element romantique">
                                 <i class="fa-sharp fa-solid fa-heart"></i>
                                 <p>Romantique</p>
                             </div>
-                            <div class="filter-element pepites">
+                            <div class="filter__container filter__sub--container filter__element pepites">
                                 <i class="fa-sharp fa-solid fa-fire"></i>
                                 <p>Nos pépites</p>
                             </div>
