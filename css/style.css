@@ -94,7 +94,7 @@ h4 {
     flex-flow: row nowrap;
 }
 
-.logo img{
+.header__div--logo img{
     width: 61.09px;
     height: 19px;
     position: relative;
@@ -261,8 +261,8 @@ input:placeholder-shown {
     flex-flow: row wrap;
     /* center 2nd direction : title and elements */
     align-items: center;
-    /* gap between title and container */
-    gap: 15px;
+    /* gap btwn filter title and the containers */
+    column-gap: 15px;
 }
 
 .filter__container {
@@ -309,13 +309,9 @@ input:placeholder-shown {
 }
 
 /****** Info ***********/
-.info {
+.filter__info {
     max-width: 1440px;
-    width: 100%;
     padding: 37.5px 0px;
-}
-
-.info__container {
     /* to allow text to move line above sooner */
     width: 90%;
     height: 24px;
@@ -325,7 +321,7 @@ input:placeholder-shown {
     gap: 10px;
 }
 
-.info__container i {
+.filter__info i {
     width: 4px;
     height: 10px;
     padding: 7px 10px;
@@ -736,12 +732,14 @@ footer a {
 
 
     /* !!!!!! FILTERS !!!!!! */
+    .filter {
+        margin: 35px 20px;
+    }
     .filter__title {
         margin-bottom: 20px;
     }
 
     .filter__container {
-        flex-wrap: wrap;
         width: 100%;
     }
 
@@ -754,8 +752,8 @@ footer a {
     }
 
     /********** Info *********/
-    .info {
-        padding: 35px 0px;
+    .filter__info {
+        padding: 35px 0px 0px 0px;
     }
 
     /********** Hébergements and populaires *********/
