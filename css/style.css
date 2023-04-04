@@ -702,6 +702,11 @@ footer a {
     }
 
     /******** TITLE SEARCH FILTERS *********/
+    .title {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
     .form__container {
         /* IOT to align button to the right */
         justify-content: space-between;
