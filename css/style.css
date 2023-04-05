@@ -89,9 +89,7 @@ h4 {
 }
 
 .header__div {
-    /* no wrap IOT match responsive easily */
     display: flex;
-    flex-flow: row nowrap;
 }
 
 .header__div--logo img{
@@ -102,7 +100,6 @@ h4 {
 }
 
 .header__nav--link {
-    /* general properties for text links + pixel perfect position */
     color: black;
     text-decoration: none;
     padding-top: 18px;
@@ -591,7 +588,7 @@ footer a {
 /****** Media queries ***********/
 
 /* Medium devices (tablets, less/equal than 1024px) */
-@media (max-width: 1080px) {
+@media (max-width: 1024px) {
     /* !!!!!! FILTERS !!!!!! */
     .filter {
         display: block;
@@ -652,7 +649,7 @@ footer a {
 }
 
 /* Small devices (phones, less than 768px) - general*/
-@media (max-width: 780px) {
+@media (max-width: 768px) {
     main {
         width: 100%;
         box-sizing: border-box;
@@ -663,6 +660,11 @@ footer a {
         flex-direction: column;
         padding: 0px;
         width: 100%;
+    }
+
+    .responsive__margin {
+        margin-right: 20px;
+        margin-left: 20px;
     }
 
     /* !!!!!! HEADER !!!!!! */
@@ -702,11 +704,6 @@ footer a {
     }
 
     /******** TITLE SEARCH FILTERS *********/
-    .title {
-        margin-right: 20px;
-        margin-left: 20px;
-    }
-
     .form__container {
         /* IOT to align button to the right */
         justify-content: space-between;
@@ -738,7 +735,8 @@ footer a {
 
     /* !!!!!! FILTERS !!!!!! */
     .filter {
-        margin: 35px 20px;
+        margin-top: 35px;
+        margin-bottom: 35px;
     }
     .filter__title {
         margin-bottom: 20px;
