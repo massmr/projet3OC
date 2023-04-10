@@ -110,8 +110,8 @@ h4 {
 }
 
 .header__nav--link:hover { /*hover mode*/
-    color: #0065FC;
-    border-top: 2px solid #0065FC;
+    color: var(--main-color);
+    border-top: 2px solid var(--main-color);
 }
 
 /****** Title And Search And Filters ***********/
@@ -582,18 +582,6 @@ footer a {
 }
 
 /****** Media queries ***********/
-@media (max-width: 1231px) {
-    /*IOT to reduce cards title font size*/
-    /*otherwise elements go out of the card*/
-    .card__title {
-        font-size: 15px;
-    }
-
-    .card__subtitle {
-        font-size: 14px;
-    }
-}
-
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
     /* !!!!!! FILTERS !!!!!! */
@@ -897,7 +885,19 @@ footer a {
     }
 }
 
-/* everything after is to avoid size bugs under 350px width */
+/* everything after is to avoid specific width bugs
+@media (max-width: 1231px) {
+    /*IOT to reduce cards title font size*/
+    /*otherwise elements go out of the card*/
+    .card__title {
+        font-size: 15px;
+    }
+
+    .card__subtitle {
+        font-size: 14px;
+    }
+}
+
 @media (max-width: 350px) {
     .filter__element p {
         /* resize filter texts */
