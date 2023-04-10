@@ -151,14 +151,14 @@ h4 {
 
 .form__icon i {
     /* IOT to keep it on left side */
-    top: 1px;
+    /*top: 1px;*/
     left: 1px;
     /* above inpute */
     z-index: 2;
     /* icon properties */
     height: 18px;
     width: 14px;
-    padding: 14px 18px 15px 18px;
+    padding: 15px 18px 15px 18px;
     color: #000000;
     background-color: var(--main-bg-color);
     border: 0.5px solid transparent;
