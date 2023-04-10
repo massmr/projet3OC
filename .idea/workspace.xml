@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6617d128-667b-439e-8ba4-b782d7bf44e4" name="Changes" comment="fixed brackets error" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="sass" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectId" id="2NuZzPY9VJDIbS7u019jGzCwGvE" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "sass",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Massimo/Dev/OCR/projet3/projet3OC",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6617d128-667b-439e-8ba4-b782d7bf44e4" name="Changes" comment="" />
+      <created>1680516189109</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1680516189109</updated>
+      <workItem from="1680516190666" duration="6382000" />
+      <workItem from="1680525843163" duration="13556000" />
+      <workItem from="1680540992460" duration="3949000" />
+      <workItem from="1680556000584" duration="8536000" />
+      <workItem from="1680625296115" duration="3715000" />
+      <workItem from="1680629062007" duration="35000" />
+      <workItem from="1680695322578" duration="13932000" />
+      <workItem from="1681126121169" duration="803000" />
+      <workItem from="1681145739529" duration="973000" />
+    </task>
+    <task id="LOCAL-00001" summary="clean code : header titles filters, searchbar ongoing">
+      <created>1680541976479</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1680541976479</updated>
+    </task>
+    <task id="LOCAL-00002" summary="clean code : hebergements, populaires">
+      <created>1680564262131</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1680564262131</updated>
+    </task>
+    <task id="LOCAL-00003" summary="audrey review : header ok">
+      <created>1680625785477</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1680625785477</updated>
+    </task>
+    <task id="LOCAL-00004" summary="audrey review : filter and info corrected">
+      <created>1680627439821</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680627439821</updated>
+    </task>
+    <task id="LOCAL-00005" summary="title corrected">
+      <created>1680627961953</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1680627961953</updated>
+    </task>
+    <task id="LOCAL-00006" summary="creation of class=&quot;responsive__margin&quot;">
+      <created>1680696492814</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680696492814</updated>
+    </task>
+    <task id="LOCAL-00007" summary="correction of card__title card__subtitle">
+      <created>1680698810902</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680698810902</updated>
+    </task>
+    <task id="LOCAL-00008" summary="responsive integration of populaires and hebergements">
+      <created>1680699473543</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680699473543</updated>
+    </task>
+    <task id="LOCAL-00009" summary="clean code copy &amp; paste parts">
+      <created>1681120428325</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1681120428325</updated>
+    </task>
+    <task id="LOCAL-00010" summary="form__icon size fix">
+      <created>1681126208038</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1681126208038</updated>
+    </task>
+    <task id="LOCAL-00011" summary="form : responsive margin fixed">
+      <created>1681126494462</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1681126494462</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="sass" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="sass" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="clean code : header titles filters, searchbar ongoing" />
+    <MESSAGE value="clean code : search bar" />
+    <MESSAGE value="clean code : hebergements, populaires" />
+    <MESSAGE value="audrey review : header ok" />
+    <MESSAGE value="audrey review : filter and info corrected" />
+    <MESSAGE value="title corrected" />
+    <MESSAGE value="creation of class=&quot;responsive__margin&quot;" />
+    <MESSAGE value="correction of card__title card__subtitle" />
+    <MESSAGE value="responsive integration of populaires and hebergements" />
+    <MESSAGE value="clean code copy &amp; paste parts" />
+    <MESSAGE value="form__icon size fix" />
+    <MESSAGE value="form : responsive margin fixed" />
+    <MESSAGE value="fixed brackets error" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed brackets error" />
+  </component>
+</project>
