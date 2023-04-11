@@ -179,10 +179,14 @@ h4 {
     padding-left: 64px;
 }
 
+/*noinspection ALL*/
 input {
     font-size: 18px;
     font-weight: 700;
     color: var(--placeholder-color);
+}
+
+input::placeholder {
 }
 
 input::placeholder {
@@ -196,9 +200,12 @@ input::-moz-placeholder {
 }
 
 input::-webkit-input-placeholder {
+}
+
+input::-webkit-input-placeholder {
     color: var(--placeholder-color);
 }
- 
+
 input:focus {
     color: var(--placeholder-color);
     outline: none;
@@ -229,6 +236,9 @@ input:placeholder-shown {
     width: 132px;
     right: 182px;
     border-radius: 0px 15px 15px 0px;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0px;
 }
 
 .button__for--responsive {
@@ -764,11 +774,10 @@ footer a {
         flex-wrap: wrap-reverse;
     }
 
-    .hebergements__populaires--container section {
+    .hebergements__populaires--section {
         border-radius: 0px;
         padding-top: 30px;
         padding-bottom: 30px;
-        box-sizing: border-box;
     }
 
     .card__title {
@@ -885,7 +894,7 @@ footer a {
     }
 }
 
-/* everything after is to avoid specific width bugs
+/* everything after is to avoid specific width bugs*/
 @media (max-width: 1231px) {
     /*IOT to reduce cards title font size*/
     /*otherwise elements go out of the card*/
