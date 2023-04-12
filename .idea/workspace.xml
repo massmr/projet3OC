@@ -43,7 +43,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "sass",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/Massimo/Dev/OCR/projet3/projet3OC",
     "node.js.detected.package.eslint": "true",
@@ -71,6 +71,7 @@
       <workItem from="1680695322578" duration="13932000" />
       <workItem from="1681126121169" duration="803000" />
       <workItem from="1681145739529" duration="973000" />
+      <workItem from="1681147262675" duration="268000" />
     </task>
     <task id="LOCAL-00001" summary="clean code : header titles filters, searchbar ongoing">
       <created>1680541976479</created>
