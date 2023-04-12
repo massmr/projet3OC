@@ -1,7 +1,6 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
-    /*border: 1px solid black;*/
 }
 
 :root {
@@ -179,10 +178,14 @@ h4 {
     padding-left: 64px;
 }
 
+/*noinspection ALL*/
 input {
     font-size: 18px;
     font-weight: 700;
     color: var(--placeholder-color);
+}
+
+input::placeholder {
 }
 
 input::placeholder {
@@ -196,9 +199,12 @@ input::-moz-placeholder {
 }
 
 input::-webkit-input-placeholder {
+}
+
+input::-webkit-input-placeholder {
     color: var(--placeholder-color);
 }
- 
+
 input:focus {
     color: var(--placeholder-color);
     outline: none;
@@ -229,6 +235,9 @@ input:placeholder-shown {
     width: 132px;
     right: 182px;
     border-radius: 0px 15px 15px 0px;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0px;
 }
 
 .button__for--responsive {
@@ -563,20 +572,20 @@ input:placeholder-shown {
 footer {
     width: 100%;
     height: 163px;
-    margin-top: 125px;
-}
-
-.footer {
-    background-color: #F2F2F2;
+    margin-top: 125px;background-color: #F2F2F2;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-footer section {
+.footer__div {
     padding: 20px 0px 0px 20px;
 }
 
-footer a {
+.footer__div h4 {
+    margin-top: 15px;
+}
+
+.footer__div a {
     text-decoration: none;
     color: #000000;
 }
@@ -764,11 +773,10 @@ footer a {
         flex-wrap: wrap-reverse;
     }
 
-    .hebergements__populaires--container section {
+    .hebergements__populaires--section {
         border-radius: 0px;
         padding-top: 30px;
         padding-bottom: 30px;
-        box-sizing: border-box;
     }
 
     .card__title {
@@ -859,33 +867,21 @@ footer a {
 
     /********* Footer **********/
     footer {
-        /* full height */
         height: 100%;
-        /* to compensate with main container margin */
-        margin-top: 25px;
-    }
-    
-    .footer {
-        /* easier to fit in display flex for responsive screen */
+        width: auto;
+        margin-top: 125px;
         display: flex;
         flex-flow: column nowrap;
-        /* to adjust responsive gap */
-        gap: 39px;
-        /* adjust with previous div */
-        margin-top: 65px;
-    }
-    
-    footer section {
-        /* to adjust to responsive padding */
-        padding: 0px 0px 0px 30px;
+        gap: 50px;
+        padding: 30px 30px;
     }
 
-    .apropos {
-        margin-top: 30px;
+    .footer__div {
+        padding: 0px;
     }
 }
 
-/* everything after is to avoid specific width bugs
+/* everything after is to avoid specific width bugs*/
 @media (max-width: 1231px) {
     /*IOT to reduce cards title font size*/
     /*otherwise elements go out of the card*/
